@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "name": "Iphone 13",
+      "id": 1,
+      "description": "iPhone 13 with Ceramic Shield. Tougher than any smartphone glass. Buy now. Our most advanced dual-camera system ever",
+      "price": "999",
+      "image": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6ae7133d-64fb-42e0-bf4a-9e8504d1488e.png?fit=scale-down&source=next&width=700"
+    },
+    {
+      "name": "Pixel 6",
+      "id": 2,
+      "description": "Pixel 6 is built from Pixel's toughest Gorilla Glass yet, with up to 2x better scratch resistance than previous Pixel phones",
+      "price": "799",
+      "image": "https://media.carphonewarehouse.com/is/image/cpw2/pixel-6-proWHITE8"
+    },
+    {
+      "name": "Vivo x70 pro",
+      "id": 3,
+      "description": "Fluorite AG. An exquisite surface. The unforgettable touch of comfort. ... 5G platform. Smooth performance to pursue perfection",
+      "price": "599",
+      "image": "https://1.bp.blogspot.com/-nvMlSm39dUw/YQTp8xDky3I/AAAAAAAAAw0/qp8BNDB8TlwmQu9wC-gMttRjG1rtGhxpgCLcBGAsYHQ/s500/Vivo-X60-Pro-techjigyasha.png"
+    },
+    {
+      "name": "Redmi note 10 pro",
+      "id": 4,
+      "description": "The phone comes with a 6.67-inch touchscreen display. Redmi Note 10 Pro is powered by an octa-core Qualcomm Snapdragon 732G processor",
+      "price": "249",
+      "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1620378135.39676516.png"
+    }
+  ]
+}
