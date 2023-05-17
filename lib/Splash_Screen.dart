@@ -5,6 +5,8 @@ import 'package:mobibazar/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -25,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Build your splash screen UI here
     return Scaffold(
       body: Center(
-        child: "Mobi Bazar".text.xl2.bold.color(context.theme.accentColor).make()
+        child: "Mobi Bazar".text.xl2.bold.color(context.theme.colorScheme.secondary).make()
         ),
       );
   }

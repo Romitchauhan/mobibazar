@@ -19,7 +19,7 @@ class Item {
   final String name;
   final String description;
   final int price;
-  int quantity;
+  num quantity;
  // final String color;
   final String image;
 
@@ -41,7 +41,7 @@ class Item {
     required String description,
     required int price,
     //required String color,
-    int quantity = 1,
+    num quantity = 1,
     required String image,
   }) {
     return Item(
@@ -75,11 +75,11 @@ class Item {
       name: map['name'],
       description: map['description'],
       price: int.parse(map['price'].toString()), // Convert string to integer
+      //color: map['color'],
       image: map['image'],
       quantity: map['quantity'] ?? 1,
     );
   }
-
 
   String toJson() => json.encode(toMap());
 
@@ -134,7 +134,7 @@ class SearchMutation extends VxMutation<MyStore> {
 
 class ChangeQuantity extends VxMutation<MyStore> {
   final Item catalog;
-  final int quantity;
+  final num quantity;
 
   ChangeQuantity(this.catalog, this.quantity);
   @override

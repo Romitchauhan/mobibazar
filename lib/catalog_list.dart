@@ -7,6 +7,8 @@ import 'catalog.dart';
 import 'catalog_image.dart';
 import 'home_detail_page.dart';
 
+
+
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
