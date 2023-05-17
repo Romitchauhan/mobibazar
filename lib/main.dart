@@ -19,9 +19,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var vxNavigator = VxNavigator(routes: {
-      "/": (_, __) => MaterialPage(child: HomePage()),
+      "/": (_, __) => MaterialPage(child: SplashScreen()), // Splash screen route
       MyRoutes.homeRoute: (_, __) => MaterialPage(child: HomePage()),
-      MyRoutes.homeDetailsRoute: (uri, _) {
+      // Rest of the routes..
+    MyRoutes.homeDetailsRoute: (uri, _) {
         final catalog = (VxState.store as MyStore)
             .catalog
             .getById(int.parse(uri.queryParameters["id"]!));

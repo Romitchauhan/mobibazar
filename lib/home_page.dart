@@ -28,17 +28,19 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(const Duration(seconds: 2));
-    final catalogJson =
-    await rootBundle.loadString("assets/files/catalog.json");
+    await Future.delayed(const Duration(seconds: 1));
+    final catalogJson = await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["data"];
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
-    (VxState.store as MyStore).items = CatalogModel.items;
-    setState(() {});
+    if (mounted) {
+      (VxState.store as MyStore).items = CatalogModel.items;
+      setState(() {});
+    }
   }
+
 
   @override
   Widget build(BuildContext context) {

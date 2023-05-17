@@ -4,7 +4,7 @@ import 'cart.dart';
 import 'catalog.dart';
 
 class MyStore extends VxStore {
-  CatalogModel catalog = CatalogModel();
+    CatalogModel  catalog = CatalogModel();
   CartModel cart = CartModel();
   VxNavigator navigator = VxNavigator(routes: {});
   List<Item> items = [];

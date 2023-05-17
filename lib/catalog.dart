@@ -18,12 +18,12 @@ class Item {
   final int id;
   final String name;
   final String description;
-  final String price;
+  final int price;
   int quantity;
  // final String color;
   final String image;
 
-  String get totalPrice => price * quantity;
+  num get totalPrice => price * quantity;
 
   Item({
     required this.id,
@@ -39,7 +39,7 @@ class Item {
     required int id,
     required String name,
     required String description,
-    required String price,
+    required int price,
     //required String color,
     int quantity = 1,
     required String image,
@@ -74,12 +74,12 @@ class Item {
       id: map['id'],
       name: map['name'],
       description: map['description'],
-      price: map['price'],
-      //color: map['color'],
+      price: int.parse(map['price'].toString()), // Convert string to integer
       image: map['image'],
       quantity: map['quantity'] ?? 1,
     );
   }
+
 
   String toJson() => json.encode(toMap());
 
@@ -139,6 +139,6 @@ class ChangeQuantity extends VxMutation<MyStore> {
   ChangeQuantity(this.catalog, this.quantity);
   @override
   perform() {
-    catalog.quantity = quantity;
+    catalog.quantity = quantity ;
   }
 }

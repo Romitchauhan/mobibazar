@@ -2,10 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:mobibazar/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -14,24 +13,20 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushNamedAndRemoveUntil(
-        context,
-        MyRoutes.homeRoute,
-            (Route<dynamic> route) => false,
-      );
+    Timer(Duration(seconds: 3), () {
+      // Navigate to the main screen
+      VxNavigator.of(context).push(Uri.parse(MyRoutes.homeRoute));
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    // Build your splash screen UI here
+    return Scaffold(
       body: Center(
-        child: Text(
-          'Mobi Bazar',
-          style: TextStyle(fontSize: 24.0),
+        child: "Mobi Bazar".text.xl2.bold.color(context.theme.accentColor).make()
         ),
-      ),
-    );
+      );
   }
 }
